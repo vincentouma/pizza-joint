@@ -1,0 +1,21 @@
+nav{
+    text-transform:uppercase;
+    text-decoration:none;
+    text-align:right;
+    paddin:10px;
+    heigh:20px;
+   }
+ nav li{
+    margin:right;
+    margin:left;
+    display:inline;
+   }
+nav li a{
+    
+    text-decoration: none;
+    padding: 3%;
+
+    }
+nav li a:hover{
+       color: black;
+}
