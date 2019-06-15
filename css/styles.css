@@ -1,21 +1,27 @@
 nav{
     text-transform:uppercase;
-    text-decoration:none;
-    text-align:right;
+    text-decoration:underline;
+    text-align:left;
     paddin:10px;
     heigh:20px;
    }
  nav li{
-    margin:right;
+     margin:right; 
     margin:left;
     display:inline;
    }
 nav li a{
     
     text-decoration: none;
-    padding: 3%;
+    padding: 2%;
 
     }
 nav li a:hover{
        color: black;
+}
+body{
+    
+   
+    
+    
 }
