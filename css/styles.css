@@ -2,8 +2,7 @@ nav{
     text-transform:uppercase;
     text-decoration:underline;
     text-align:left;
-    paddin:10px;
-    heigh:20px;
+    
    }
  nav li{
      margin:right; 
@@ -19,9 +18,28 @@ nav li a{
 nav li a:hover{
        color: black;
 }
-body{
-    
-   
-    
-    
+.img1{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
+.prg1,h2,p,h6,h1,h3,h4{
+    text-align: center;
+}
+.img2{
+    border-radius: 50%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .img3{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .psg1{
+      display:none;
+
+  }
+
