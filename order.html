@@ -36,39 +36,72 @@
 
                 </ol>
             </div>
-            <div id="checkbox">
-                <div class="large">
-                    <img src="./images/larg pizza.jpg"> 
-                
-                <p>Large pizza</p>
-
-                <form >
-                    <h5>choose your flavor</h5>
-                    <input type="checkbox" name="beef" value="Beef">beef<br>
-                    <input type="checkbox" name="ckicken" value="ckicken">chicken<br>
-                    <input type="checkbox" name="veges" value="veges" checked>veges<br><br>
-                    <h5>choose your crust</h5>
-                    <input type="checkbox" name="beef" value="crispy">crispy<br>
-                    <input type="checkbox" name="ckicken" value="stuffed">stuffed<br>
-                    <input type="checkbox" name="veges" value="gluton free" checked>gluton free<br><br>
-                    <h5>choose your toppins</h5>
-                    <input type="checkbox" name="beef" value="Beef">Peporoni<br>
-                    <input type="checkbox" name="ckicken" value="ckicken">Mushroom<br>
-                    <input type="checkbox" name="veges" value="veges" checked>Extra chees<br>
-                    <input type="checkbox" name="beef" value="Beef">green papers<br>
-                    <input type="checkbox" name="ckicken" value="ckicken">ckicken source<br>
-                    <input type="checkbox" name="veges" value="veges" checked>Bindi special<br><br>
-                    <a class="icon has-text-primary is-size-3"><i class="fa fa-plus-square-o"></i></a>
-
-                    <input type="submit" value="Submit">
-                  </form>
-
+            <div class="row">
+                <div class="col-xs-5 pizza1">
+                    <form id="pizza1">
+                        <div class="form-group">
+                            <label for="time">Select a size</label>
+                            <select class="form-control" id="size">
+                                <option value="1">Real Deal </option>
+                                <option value="2">Standard
+                                </option>
+                                <option value="3">Large 
+                                </option>
+                                
+                            </select>
+                        </div>
+                        <button  type="submit" name="button">Add some toppings!</button>
+                    </form>
+                </div>
             </div>
-            </div>
-        </div>
 
-    </div>
+            <div class="row ">
+                <div class="col-xs-7 col-xs-offset-1">
+                    <div class="row topsAdd stagedReveal framed">
+                        <div class="col-xs-5">
+                            <h3 class="heading">Pick your toppings:</h3>
+                            <form action="form_action.asp" class="toppings">
+                                <input type="checkbox" name="topping" value="1" id="cheese">Cheese<br>
+                                <input type="checkbox" name="topping" value="2">Pepperoni<br>
+                                <input type="checkbox" name="topping" value="3">Sausage<br>
+                                <input type="checkbox" name="topping" value="4">Canadian Bacon<br>
+                                <input type="checkbox" name="topping" value="5">Steak<br>
+                                <input type="checkbox" name="topping" value="6">Tofu<br>
+                                <input type="checkbox" name="topping" value="7">Onions<br>
+                                <input type="checkbox" name="topping" value="8">Green Peppers<br>
+                                <input type="checkbox" name="topping" value="9">Mushrooms<br>
+                                <input type="checkbox" name="topping" value="10">Pineapple<br>
+                                <input type="checkbox" name="topping" value="11">Olives<br>
+                                <input type="checkbox" name="topping" value="12">Jalapenos<br>
+                                <br>
+                                <button type="submit" name="button"
+                                    id="topSubmit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row stagedReveal thanks framed">
+                        <div class="col-xs-9 ">
+                            
+                            <h1>Thank you for your order!</h1>
+                            <p>Hang on, I need another pizza!</p>
+                            <form id="pizza2">
+                                <div class="form-group">
+                                    <label for="time">Select a size</label>
+                                    <select class="form-control" id="size2">
+                                        <option value="1">Small </option>
+                                        <option value="2">Medium 
+                                        </option>
+                                        <option value="3">Large 
+                                        </option>
+                                        <option value="4">Extra-Large</option>
+                                    </select>
+                                </div>
+                                <button type="submit" name="button">Add to order!</button>
+                            </form>
+                        </div>
 
+                    </div>
+                </div>
 </body>
 
 </html>
