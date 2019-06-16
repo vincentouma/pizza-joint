@@ -1,7 +1,7 @@
 nav {
     text-transform: uppercase;
-    text-decoration: underline;
-    text-align: left;
+    text-decoration: none;
+    text-align: right;
 
 }
 
@@ -147,6 +147,14 @@ img {
 
 /* On smaller screens, decrease text size */
  @media only screen and (max-width: 300px) {
+ }
     .text {
         font-size: 11px;
+    }
+   
+   #col{
+        text-align:left;
+        text-decoration: underline;
+        color: black;
+        font-size: large;
     } 
