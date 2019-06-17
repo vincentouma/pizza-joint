@@ -7,12 +7,15 @@ nav {
   text-transform: uppercase;
   text-decoration: none;
   text-align: right;
+  margin-bottom: 20px;
+
 }
 
 nav li {
   margin: right;
   margin: left;
   display: inline;
+
 }
 
 nav li a {

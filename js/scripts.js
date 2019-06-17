@@ -130,9 +130,9 @@ $(document).ready(function() {
 
   $("#delivery").click(function(event) {
     event.preventDefault()
-    var delivery = 100
+    var delivery = 180
     $(".delivery").show()
-    $("#checkouts").append("<li>" + "Delivery : 100" + "</li>")
+    $("#checkouts").append("<li>" + "Delivery : 180" + "</li>")
     total += delivery
     alert("The total so far is:" + total)
   });
