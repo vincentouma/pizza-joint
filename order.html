@@ -6,110 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>bindipiza</title>
-    <link href="css/bootstra.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
+        <div class="container">
 
 
 
 
+   
+        
 
-    <title>Everything Pizza</title>
-    </head>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">ORDER HERE</a></li>
+                    <li><a href="contacts">contacts</a></li>
+                </ul>
+            </nav>
 
-    <body>
-        <div class="container" id="home">
-            <header>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="order.html">ORDER HERE</a></li>
-                        <li><a href="contacts">contacts</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <div class="row">
+                <div class="col4">
+                    <div id="menu">
+                        <h2><strong> Size:</strong></h2>
 
-            <div id="menu">
-                <h2><strong> Size:</strong></h2>
-                
-                <form class="size" id="size">
-                    <input type="radio" name="size" value="0" checked>Large ksh.700<br>
-                    <input type="radio" name="size" value="1">Standard ksh.500<br>
-                    <input type="radio" name="size" value="2">sma ksh.300<br><br>
-                    <input type="submit" value="submit">
-                </form>
-            </div>
-            <div>
-        <h2><strong> Crust:</strong></h2>
-        <form id="crust">
-                <div class="col-md-2 crust">
-
-                    <input type="radio" name="crust" value="0" checked>Thin kshs.100<br>
-
-
-                    <input type="radio" name="crust" value="1">Thick kshs.100<br>
-
-
-                    <input type="radio" name="crust" value="2">Deep kshs.100<br>
-
-
-                    <input type="radio" name="crust" value="3">Cheese kshs.150<br>
-
-
-                    <input type="radio" name="crust" value="4">Stuffed Crust kshs.200<br>
+                        <form class="size" id="size">
+                            <input type="radio" name="size" value="0" checked>Large ksh.700<br>
+                            <input type="radio" name="size" value="1">Standard ksh.500<br>
+                            <input type="radio" name="size" value="2">sma ksh.300<br><br>
+                            <input type="submit" value="submit">
+                        </form>
+                    </div>
                 </div>
-                <input type="submit">
+                <div class="col-4">
+                    <h2><strong> Crust:</strong></h2>
+                    <form id="crust">
 
-                </form>
 
-            </div>
-            <div class="row justify-content-center align-items-center">
-                <h2> Toppings:</h2>
-                <form class="form-inline" id="toppings">
-                    <div class=" toppings">
+                        <input type="radio" name="crust" value="0" checked>Thin kshs.100<br>
+
+
+                        <input type="radio" name="crust" value="1">Thick kshs.100<br>
+
+
+                        <input type="radio" name="crust" value="2">Deep kshs.100<br>
+
+
+                        <input type="radio" name="crust" value="3">Cheese kshs.150<br>
+
+
+                        <input type="radio" name="crust" value="4">Stuffed Crust kshs.200<br>
+
+                        <input type="submit">
+
+                    </form>
+
+                </div>
+                <div class="col-4" id="tops">
+                    <h2> Toppings:</h2>
+                    <form id="toppings">
+
                         <input type="checkbox" name="toppings" value="0">Extra tomato<br>
 
-                    </div>
-                    <div class=toppings">
+
+                        
+
                         <input type="checkbox" name="toppings" value="1">Bell Peppers<br>
 
-                    </div>
-                    <div class=" toppings">
+
+                        
+
                         <input type="checkbox" name="toppings" value="2">Mexican Cheese<br>
-                        pings">
-                    </div>
-                    <div class="c toppings">
+
+
+                        
+
 
                         <input type="checkbox" name="toppings" value="3">Extra Cheese<br>
-                    </div>
-                    <div class=" toppings">
+
+                        
+
 
                         <input type="checkbox" name="toppings" value="4">Avocado special<br>
-                    </div>
-                    <div class="toppings">
+
+                       
 
                         <input type="checkbox" name="toppings" value="5">Mushroom<br>
-                    </div>
-                    <div class=" toppings">
+
+                       
+
 
                         <input type="checkbox" name="toppings" value="6">Onions<br>
-                    </div>
-                    <div class=" toppings">
+
+                      
 
                         <input type="checkbox" name="toppings" value="7">Pepperoni<br>
-                    </div>
-                    <div class="toppings">
+
+                        
+
 
                         <input type="checkbox" name="toppings" value="8">Sausage<br>
-                    </div>
-                    <input value="submit" type="submit">
 
-                </form>
+                     
+                        <input value="submit" type="submit">
+
+                    </form>
+                </div>
             </div>
             <div id="sides">
                 <h2><strong>Enter the number of pizza</strong></h2>
