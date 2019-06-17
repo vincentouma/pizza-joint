@@ -8,7 +8,7 @@
     <title>bindipiza</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-
+    <link href="https://fonts.googleapis.com/css?family=Mali|Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,12 +26,24 @@
         </nav>
 
         <h2>ORDER YOUR PIZZA ONLINE</h2>
+        <em>(ensure you check out)</em>
 
         <div id="menu">
+            <div class="row">
+                <div class="col-4">
+                    <img src="./images/piza1jpg" width="200px" height="200px">
+                </div>
+                <div class="col-4">
+                    <img src="./images/piz2.jpg" width="200px" height="200px">
+                </div>
+                <div class="col-4">
+                    <img src="./images/pzi3.jpg" width="200px" height="200px">
+                </div>
+            </div>
             
            <div class="row">
                <div class="col-4">
-            <label for="size">Size</label>
+            <label for="size"> Select Size</label>
                 <form class="size" id="size">
                     <input type="radio" name="size" value="0" checked>Large ksh.700<br>
                     <input type="radio" name="size" value="1">Standard ksh.500<br>
@@ -42,7 +54,7 @@
             </div>
 
             <div class="col-4">
-                <label for="crust">Crust</label>
+                <label for="crust">Select Crust</label>
                 <form id="crust">
 
 
@@ -66,7 +78,7 @@
             </div>
             <div class="col-4">
             <div id="tops">
-                    <label for="toppings">Toppings</label>
+                    <label for="toppings">Select Toppings</label>
                 <form id="toppings">
 
                     <input type="checkbox" name="toppings" value="0">Extra tomato<br>
@@ -130,13 +142,18 @@
 
         <div id="checkout">
             <h2>help us get to you</h2>
+            <br>
             <button id="delivery"
                     aria-hidden="true"></i> Delivery ksh.180</button>
             <form class="delivery">
                 <h4>What's the delivery address?</h4>
+                <br>
                 <input type="text" id="name" name="name" value="street">Name:<br>
+                <br>
                 <input type="text" id="building" name="building" value="building">Building:<br>
+                <br>
                 <input type="text" id="houseNumber" name="houseNumber" value="houseNumber">Door Number:<br>
+                <br>
                 <input type="submit">
             </form>
             <button id="pickup" 
@@ -151,6 +168,8 @@
 
         </ul>
     </div>
+
+
     <script src="js/jquery-3.4.1 (1).js"></script>
 
     <script src="js/scripts.js"></script>
