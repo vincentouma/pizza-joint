@@ -1,112 +1,100 @@
-/********toggle menu***** */
-$(document).ready(function () {
-    var size;
-    var flavor;
-    var crust;
-    var quantity;
-    var totalPrice
-    var orderStreet
+const extraTomato = {name:"extratomato", price: 100};
+const onions = {name:"onions", price: 50};
+const ovacadoSpecial = {name:"ovacado special", price: 100};
+const bellPepper = {name: "Bell Pepper", price: 50};
+const  sausage= {name:"sausage", price: 50};
+const chicken = {name:"Chicken", price:150};
+const extraCheese = {name:"extraCheese", price:50};
+const mexican = {name:"mexican", price:50};
+const mushrooms ={name:"Mushrooms", price:100};
+const toppingsList = {name:"Toppings",items:[sausage,bellPepper,extraCheese, mexican, ovacadoSpecial, mushrooms, onions, extraTomato, chicken]}
 
-    $(".img3").click(function () {
-        $(".img3").hide(function () {
-            $(".psg1", ).show(function () {
-                $(".header").css('font-weight', 'bold');
-            });
-        });
+//Trying to use objects within obejcts for size
+const large = {name: "Large Size", price: 550};
+const medium = {name:"Medium Size", price: 400};
+const small = {name: "Small Size", price: 200};
+const sizeList = {name:"Sizes", items:[large,medium,small]};
+
+//Using nested objects for crusts
+const thin = {name:"Thin Crust", price:70};
+const thick = {name:"Thick Crust", price: 100};
+const deep = {name:"Deep Crust", price:100};
+const cheese = {name:"Cheese Crust", price:150};
+const stuffed = {name: "Stuffed Crust", price: 250};
+const crustsList = {name:"Crusts", items:[thin,thick,deep,cheese,stuffed]};
+
+$(document).ready(function(){
+  var total = 0
+  $(".delivery").hide();
+  $("#checkouts").hide();
+    //Getting the radio button values into JQuery
+    //Size
+    $("#size").submit(function(event){
+      event.preventDefault()
+      var size = parseInt($("input[name='size']:checked").val());
+      var sizeName = sizeList.items[size].name
+      $("#checkouts").append("<li>" + sizeList.items[size].name+" "+sizeList.items[size].price +"</li>")
+      total += (sizeList.items[size].price)
+      alert("The total so far is: " + total)
+    })
+
+  //trying to get the checked values from the toppings checkbox form
+  $("#toppings").submit(function(event){
+    event.preventDefault()
+    //Looping through the inputted topping to get the price
+       $('input[name=toppings]:checked').each(function(){
+       var toppings = parseInt($(this).val())
+       $("#checkouts").append("<li>" + toppingsList.items[toppings].name + " " + toppingsList.items[toppings].price+ "</li>")
+       total += (toppingsList.items[toppings].price)
+
+      });
+      alert("Your current total is: " + total)
+  });
+
+
+  $("#number").submit(function(event){
+    event.preventDefault()
+    var quantity = $("#quantity").val()
+    $("#checkouts").append("<li>" +"Quantity: "+ quantity +"</li>")
+    total *= quantity
+    alert("Your current total is " + total)
+  });
+
+    //Crust Values
+  $("#crust").submit(function(event){
+    event.preventDefault()
+    var crust = parseInt($("input[name='crust']:checked").val());
+    $("#checkouts").append("<li>" + crustsList.items[crust].name + " " + crustsList.items[crust].price + "</li>")
+    total += (crustsList.items[crust].price)
+    alert("The total so far is: " + total)
     });
-    $(".psg1").click(function () {
-        $(".psg1").toggle(function () {
-            $(".img3").show(function () {
-                $(".header").css('font-weight', 'normal');
-            });
-        });
+    //delivery
+  $("#delivery").click(function(event){
+    event.preventDefault()
+    var delivery = 100
+    $(".delivery").show()
+    $("#checkouts").append("<li>" +"Delivery : 100" +"</li>")
+    total += delivery
+    alert("The total so far is:" + total)
+    });
+  $(".delivery").submit(function(event){
+    event.preventDefault()
+    alert("We will deliver your pizza to " + $("#street").val() + " "+ $("#building").val() + " "+ "House Number: " + $("#houseNumber").val() )
+    $(".delivery").hide();
+  });
+    //Pickup
+  $("#pickup").click(function(event){
+    event.preventDefault()
+    $("#checkouts").append("<li>" + "Pick up: 0" +"</li>")
+    var pickup = 0
+    total += pickup
     });
 
-    $("#pizza1").submit(function (event) {
-        event.preventDefault();
-        size = parseInt(document.getElementById("size").value);
-        flavor = parseInt(document.getElementById("flavor").value);
-        crust = parseInt(document.getElementById("crust").value);
+  $("#check-out-button").click(function(){
+    $("#checkouts").append("<li>"+ "Your total is: "+ total + "</li>")
+    $("#checkouts").show();
 
-        quantity = parseInt(document.getElementById("quantity").value);
-
-        var smallPrices = [500, 550, 500];
-        var standardPrices = [700, 800, 650];
-        var largePrice = [900, 1000, 800];
-
-        var price = 0
-
-        if (size === 1) {
-            price = smallPrices[flavor - 1]
-        } else if (size === 2) {
-            price = standardPrices[flavor - 1]
-        } else {
-            price = largePrice[flavor - 1]
-        }
-
-        var inputElements = document.getElementsByClassName('topping');
-        for (var i = 0; inputElements[i]; ++i) {
-            if (inputElements[i].checked) {
-                price += 100
-            }
-        }
-        
-        event.preventDefault();{
-        alert("price of one pizza " + price);
-        totalPrice = price * quantity
-        alert("total price of all pizza " +totalPrice);
-        }
-
-        $('#goToDelivery').click(function () {
-            event.preventDefault();
-            $('.delivery').show();
-        });
-
-
-
-    });
-    $('#goToDelivery').click(function (event) {
-        event.preventDefault();
-        $(".delivery").toggle();
-        $(".totalBox").toggle();
-        //$(".goodbye").slideToggle();
-        var orderName = $("input#name").val();
-
-
-        $("#nameHere").text(orderName);
-
-    });
-    $('#deliverySubmit').click(function (event) {
-        event.preventDefault();
-        orderStreet = $("input#street").val();
-        document.getElementById("finalTotalHere").innerHTML = totalPrice;
-        document.getElementById("hom").innerHTML = orderStreet;
-
-
-    });
-
+  })
 
 });
-/**************slide landing page******** */
 
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 3000);
-}

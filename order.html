@@ -5,160 +5,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>pizzajoint</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <script src="js/jquery-3.4.1 (1).js"></script>
+    <title>bindipiza</title>
+    <link href="css/bootstra.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="order.html">ORDER HERE</a></li>
-            <li><a href="contacts">contacts</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-12">
-                <div id="order.html">
-                    <div id="top">
-                        <h2>Order amazing pizza</h2>
-                        <p>Discover Bindi Pizza that deliver to your doorstep</p>
 
-                        <div class="howto">
-                            <h5>How to order</h5>
 
-                            <ol>
-                                <li>Press the oder here on the nav bar</li>
-                                <li>choose the size of pizza you wannt</li>
-                                <li>choose the kind of crust snd the toppings of your chioce</li>
-                                <li>click deliver</li>
-                                <li>Wait for amuzement</li>
 
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
+
+    <title>Everything Pizza</title>
+    </head>
+
+    <body>
+        <div class="container" id="home">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">ORDER HERE</a></li>
+                        <li><a href="contacts">contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id="menu">
+                <h2><strong> Size:</strong></h2>
                 
-                <div class="col-8">
-                    <div id="form1">
-                        <div class="pizza1">
-                            <form id="pizza1">
-                                <div class="form-group">
-                                    <label for="time">Select a size</label><br>
-                                    <select class="form-contro" id="size">
-                                        <option value="1" required="">Real Deal </option>
-                                        <option value="2" required="">Standard
-                                        </option>
-                                        <option value="3" required="">Large
-                                        </option>
+                <form class="size" id="size">
+                    <input type="radio" name="size" value="0" checked>Large ksh.700<br>
+                    <input type="radio" name="size" value="1">Standard ksh.500<br>
+                    <input type="radio" name="size" value="2">sma ksh.300<br><br>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+            <div>
+        <h2><strong> Crust:</strong></h2>
+        <form id="crust">
+                <div class="col-md-2 crust">
 
-                                    </select>
-                                    <br>
-                                </div>
+                    <input type="radio" name="crust" value="0" checked>Thin kshs.100<br>
 
 
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="time">select crust</label><br>
-                        <select class="form-contro" id="crust">
-                            <option value="1" required="">crispy</option>
-                            <option value="2" required="">Stuffed
-                            </option>
-                            <option value="3" required="">Gluton free
-                            </option>
-
-                        </select>
-                        <br>
-                        <br>
-                    </div>
-                    <label for="time">Flavor</label><br>
-                    <select class="form-contro" id="flavor">
-                        <option value="1" required="">Beef </option>
-                        <option value="2" required="">chicken
-                        </option>
-                        <option value="3" required="">Veges
-                        </option>
-
-                    </select>
-
-                    <br>
-                    <br>
-
-                    <div class="toppins">
-
-                        <div id="checkbox">
-                            <h5>Toppings</h5>
-                            <input type="checkbox" name="topping" value="1" class="topping">Cheese    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="2" class="topping">Pepperoni    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="3" class="topping">Sausage    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="4" class="topping">Bacon    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="5" class="topping">Steak    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="6" class="topping">Extra cheese    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="7" class="topping">Onions    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="8" class="topping">Green Peppers    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="9" class="topping">Mushrooms    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="10" class="topping">Pineapple    Kshs.100<br>
-                            <input type="checkbox" name="topping" value="11" class="topping"> Black Olives    Kshs.100<br>
-                        </div>
-                        <br>
-                        <br>
-
-                        Number of pizza to order<input type="integer" id="quantity">
-                        <br>
-                        <br>
-                        <button type="submit" name="button" id="topSubmit">Confirm your order</button>
-                        <br>
+                    <input type="radio" name="crust" value="1">Thick kshs.100<br>
 
 
-                        </form>
+                    <input type="radio" name="crust" value="2">Deep kshs.100<br>
 
-                    </div>
-                    
+
+                    <input type="radio" name="crust" value="3">Cheese kshs.150<br>
+
+
+                    <input type="radio" name="crust" value="4">Stuffed Crust kshs.200<br>
                 </div>
-                <div class="col-4">
-                        <button type="button" name="button" id="goToDelivery" width="100%">Proceed to check out</button>
-                    <div class="delivery ">
-                            
-                        <h3>Enter your adress and Name</h3>
-                        <form id="address">
-                            <div class="home">
-                                <label for="Name">First name</label>
-                                <input type="text" class="form-control" id="name">
-                            </div>
-                            <br>
-                            <div class="address">
-                                <div class="home">
-                                    <label for="homename">Adress</label>
-                                    <input type="text" class="form-control new-street" id="street">
-                                </div>
-                            </div>
-                            <button type="submit" id="deliverySubmit">Deliver here</button>
-                        </form>
+                <input type="submit">
 
-                        <div class="addressText">
-                            <h3>Your Final order total is: Kshs.<span id="finalTotalHere"></span></h3>
-                            <h3>We will deliver to this address:<span id="hom"></span></h3>
+                </form>
 
-                        </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <h2> Toppings:</h2>
+                <form class="form-inline" id="toppings">
+                    <div class=" toppings">
+                        <input type="checkbox" name="toppings" value="0">Extra tomato<br>
 
                     </div>
+                    <div class=toppings">
+                        <input type="checkbox" name="toppings" value="1">Bell Peppers<br>
+
+                    </div>
+                    <div class=" toppings">
+                        <input type="checkbox" name="toppings" value="2">Mexican Cheese<br>
+                        pings">
+                    </div>
+                    <div class="c toppings">
+
+                        <input type="checkbox" name="toppings" value="3">Extra Cheese<br>
+                    </div>
+                    <div class=" toppings">
+
+                        <input type="checkbox" name="toppings" value="4">Avocado special<br>
+                    </div>
+                    <div class="toppings">
+
+                        <input type="checkbox" name="toppings" value="5">Mushroom<br>
+                    </div>
+                    <div class=" toppings">
+
+                        <input type="checkbox" name="toppings" value="6">Onions<br>
+                    </div>
+                    <div class=" toppings">
+
+                        <input type="checkbox" name="toppings" value="7">Pepperoni<br>
+                    </div>
+                    <div class="toppings">
+
+                        <input type="checkbox" name="toppings" value="8">Sausage<br>
+                    </div>
+                    <input value="submit" type="submit">
+
+                </form>
+            </div>
+            <div id="sides">
+                <h2><strong>Enter the number of pizza</strong></h2>
+                <div class="">
+                    <form id="number">
+                        <input type="number" id="quantity" name="quantity" min="1">
+                        <input type="submit">
+                    </form>
                 </div>
             </div>
+
+            <div class="row justify-content-center align-items-center" id="checkout">
+                <h2>help us get to you</h2>
+                <button id="delivery" class="btn-warning btn-block btn-lg delivery-button"><i class="fa fa-truck"
+                        aria-hidden="true"></i> Delivery ksh.200</button>
+                <form class="delivery">
+                    <h4>What's the delivery address?</h4>
+                    <input type="text" id="street" name="street" value="street">Name:<br>
+                    <input type="text" id="building" name="building" value="building">Building:<br>
+                    <input type="text" id="houseNumber" name="houseNumber" value="houseNumber">Door Number:<br>
+                    <input type="submit">
+                </form>
+                <button id="pickup" class="grey btn-block btn-lg pickup-button"><i class="fa fa-user"
+                        aria-hidden="true"></i> Pickup (free)</button>
+            </div>
+
+            <button class=" check-out-button" id="check-out-button"><i class="fa fa-cutlery" aria-hidden="true"></i>
+                CHECK OUT</button>
+
+            <h2>Thank you for trying us</h2>
+            <ul id="checkouts">
+
+            </ul>
         </div>
-        </div>
+        <script src="js/jquery-3.4.1 (1).js"></script>
 
         <script src="js/scripts.js"></script>
-</body>
+
+    </body>
+
+
 
 </html>
