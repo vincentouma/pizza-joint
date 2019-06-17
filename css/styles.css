@@ -1,5 +1,6 @@
-*{
+body{
     text-align: center;
+    background-color: coral;
 }
 nav {
     text-transform: uppercase;
@@ -17,7 +18,7 @@ nav li {
 nav li a {
 
     text-decoration: none;
-    padding: 2%;
+    padding: 1%;
 
 }
 
@@ -195,5 +196,9 @@ img {
     input{
         display: blok;
         border: 2px solid white;
+    }
+    #menu{
+        display: flex;
+        flex-direction: column;
     }
     
