@@ -50,10 +50,12 @@ $(document).ready(function () {
                 price += 100
             }
         }
-
+        
+        event.preventDefault();{
         alert("price of one pizza " + price);
         totalPrice = price * quantity
-        alert("total price of all pizza " +totalPrice );
+        alert("total price of all pizza " +totalPrice);
+        }
 
         $('#goToDelivery').click(function () {
             event.preventDefault();
@@ -106,5 +108,5 @@ function showSlides() {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 2000);
+    setTimeout(showSlides, 3000);
 }

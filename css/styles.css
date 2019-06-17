@@ -21,6 +21,9 @@ nav li a {
 nav li a:hover {
     color: black;
 }
+.back{
+    background-color:coral;
+}
 
 .img1 {
     display: block;
@@ -169,7 +172,8 @@ img {
     } 
     #top{
         width: 100%;
-        
+        color: white;
+        font-size: larger;
         background-image: url(../images/order.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -185,3 +189,4 @@ img {
         background-color: coral;
         width: 100%; 
     }
+    
