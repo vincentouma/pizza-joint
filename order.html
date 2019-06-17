@@ -8,6 +8,7 @@
     <title>pizzajoint</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/jquery-3.4.1 (1).js"></script>
 </head>
 
 <body>
@@ -42,88 +43,100 @@
                         <div class="form-group">
                             <label for="time">Select a size</label>
                             <select class="form-control" id="size">
-                                <option value="1">Real Deal </option>
-                                <option value="2">Standard
+                                <option value="1" required="">Real Deal </option>
+                                <option value="2" required="">Standard
                                 </option>
-                                <option value="3">Large
+                                <option value="3" required="">Large
                                 </option>
 
                             </select>
                         </div>
-                        
-                    </form>
+
+
                 </div>
             </div>
-            <form id="crust">
-                    <div class="form-group">
-                        <label for="time"></label>select crust
-                        <select class="form-control" id="crust">
-                            <option value="1">crispy</option>
-                            <option value="2">Stuffed
-                            </option>
-                            <option value="3">Gluton free
-                            </option>
-                            
-                        </select>
-                    </div>
-                   
-                    <button type="submit" name="button">Add some toppings!</button>
-    
-                </form>
+
+            <div class="form-group">
+                <label for="time">select crust</label>
+                <select class="form-control" id="crust">
+                    <option value="1" required="">crispy</option>
+                    <option value="2" required="">Stuffed
+                    </option>
+                    <option value="3" required="">Gluton free
+                    </option>
+
+                </select>
+            </div>
+            <label for="time">Flavor</label>
+            <select class="form-control" id="flavor">
+                <option value="1" required="">Beef </option>
+                <option value="2" required="">chicken
+                </option>
+                <option value="3" required="">Veges
+                </option>
+
+            </select>
+
+
+
+
             <div class="toppins">
 
-                <form action="form_action.asp" class="toppings">
-                    <input type="checkbox" name="topping" value="1" id="cheese">Cheese<br>
-                    <input type="checkbox" name="topping" value="2">Pepperoni<br>
-                    <input type="checkbox" name="topping" value="3">Sausage<br>
-                    <input type="checkbox" name="topping" value="4">Bacon<br>
-                    <input type="checkbox" name="topping" value="5">Steak<br>
-                    <input type="checkbox" name="topping" value="6">Extra cheese<br>
-                    <input type="checkbox" name="topping" value="7">Onions<br>
-                    <input type="checkbox" name="topping" value="8">Green Peppers<br>
-                    <input type="checkbox" name="topping" value="9">Mushrooms<br>
-                    <input type="checkbox" name="topping" value="10">Pineapple<br>
-                    <input type="checkbox" name="topping" value="11"> Black Olives<br>
+                <div id="checkbox">
+                    <input type="checkbox" name="topping" value="1" class="topping">Cheese<br>
+                    <input type="checkbox" name="topping" value="2" class="topping">Pepperoni<br>
+                    <input type="checkbox" name="topping" value="3" class="topping">Sausage<br>
+                    <input type="checkbox" name="topping" value="4" class="topping">Bacon<br>
+                    <input type="checkbox" name="topping" value="5" class="topping">Steak<br>
+                    <input type="checkbox" name="topping" value="6" class="topping">Extra cheese<br>
+                    <input type="checkbox" name="topping" value="7" class="topping">Onions<br>
+                    <input type="checkbox" name="topping" value="8" class="topping">Green Peppers<br>
+                    <input type="checkbox" name="topping" value="9" class="topping">Mushrooms<br>
+                    <input type="checkbox" name="topping" value="10" class="topping">Pineapple<br>
+                    <input type="checkbox" name="topping" value="11" class="topping"> Black Olives<br>
+                </div>
 
-                   <button type="submit" name="button">Quantity</button>
-                    <br>
-                    <button type="submit" name="button" id="topSubmit">Submit</button>
+                <br>
+                <button type="submit" name="button" id="topSubmit">Add to cart</button>
+                <br>
+
+                Quantity<input type="integer" id="quantity" required="Add more pizza">
                 </form>
 
             </div>
-            <button  type="button" name="button" id="goToDelivery">Proceed to check out.</button>
+            <button type="button" name="button" id="goToDelivery">Proceed to check out</button>
 
             <div class="delivery ">
-                    <h3>Enter your adress and Name</h3>
-                    <form id="address">
-                      <div class="home">
+                <h3>Enter your adress and Name</h3>
+                <form id="address">
+                    <div class="home">
                         <label for="Name">First name</label>
                         <input type="text" class="form-control" id="name">
-                      </div>
-                     
-                        <div class="address">
-                          <div class="home">
+                    </div>
+
+                    <div class="address">
+                        <div class="home">
                             <label for="homename">Street</label>
                             <input type="text" class="form-control new-street" id="street">
-                          </div>
-                          </div>
-                          <button type="submit" id="deliverySubmit">Deliver here</button>
-                          </form>
+                        </div>
+                    </div>
+                    <button type="submit" id="deliverySubmit">Deliver here</button>
+                </form>
 
-                          <div class= "addressText">
-                                <h3>Your Final order total is: Kshs.<span id="finalTotalHere"></span></h3>
-                                <h3>We will deliver to this address:</h3>
-                                
-                              </div>
+                <div class="addressText">
+                    <h3>Your Final order total is: Kshs.<span id="finalTotalHere"></span></h3>
+                    <h3>We will deliver to this address:<span id="hom"></span></h3>
+
+                </div>
 
 
 
-            
 
+
+            </div>
         </div>
-    </div>
 
-
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>
