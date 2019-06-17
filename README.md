@@ -1,6 +1,6 @@
 # BINDIPIZZA
 
-#### This website enables user to order food online specifically pizza for delivery at the users door step. 
+#### This website enables user to order food online specifically pizza for delivery at the users door step.
 {Date of current version 17/6/2019}
 
 #### AUTHOR
@@ -41,9 +41,9 @@ No known bugs currently but potential bug are welcome to be reported.
 ## Behavior driven development.
 * Open the link to the website or search the name of the website in the browser of your choice.
 * Click the mouse button on the landing page to navigate you to the next page of the site i.e about us page.
-* Click order here to oder the pizza has instructed in the discription
+* Click order here to order the pizza has instructed in the description
 * Click on the icons on the what we do sections to find out more about .
-* contact the email provided for more infirmation.
+* contact the email provided for more information.
 
 ## Support and contact details
 
