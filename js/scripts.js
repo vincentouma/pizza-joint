@@ -138,7 +138,7 @@ $(document).ready(function() {
   });
   $(".delivery").submit(function(event) {
     event.preventDefault()
-    alert("We will deliver your pizza to " + $("#street").val() + " " + $("#building").val() + " " + "House Number: " + $("#houseNumber").val())
+    alert("We will deliver your pizza to " + $("#name").val() + " " + $("#building").val() + " " + "House Number: " + $("#houseNumber").val())
     $(".delivery").hide();
   });
 
